@@ -14,9 +14,7 @@ const taskValidation = [
   check('title', 'Title is required and must be at least 3 characters long')
     .notEmpty()
     .isLength({ min: 3 }),
-  check('status', 'Invalid status').optional().isIn(['Pending', 'In Progress', 'Completed']),
-  check('priority', 'Invalid priority').optional().isIn(['Low', 'Medium', 'High']),
-  check('dueDate', 'Invalid due date').optional().isISO8601().toDate(),
+ 
 ];
 
 router.route('/')
